@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "../app/components/ui/navbar-menu"
+import { Navbar } from './components/ui/navbar-menu';
 
 export default function Home() {
   return (

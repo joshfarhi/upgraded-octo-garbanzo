@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -117,5 +118,18 @@ export const HoveredLink = ({ children, ...rest }: any) => {
     >
       {children}
     </Link>
+  );
+};
+
+export const Navbar = () => {
+  const [activeItem, setActiveItem] = React.useState<string | null>(null);
+
+  return (
+    <Menu setActive={setActiveItem}>
+      <MenuItem setActive={setActiveItem} active={activeItem} item="Home">
+        {/* You can put any children components here */}
+      </MenuItem>
+      {/* Add more MenuItem components as needed */}
+    </Menu>
   );
 };
